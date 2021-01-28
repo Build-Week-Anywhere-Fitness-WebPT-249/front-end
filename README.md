@@ -5,8 +5,8 @@
 ***
 
 ### PVD:  
-
+[Anywhere Fitness PVD](https://www.notion.so/Anywhere-Fitness-Product-Vision-Document-16d15d3ade6c4c2b8c6896ffeacc331f)
 ***
 ### Trello:  
-
+[Anywhere Fitness Trello](https://trello.com/b/9GqvujXH/anywhere-fitness)
 ***
