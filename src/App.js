@@ -1,4 +1,8 @@
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Signup from './components/Signup';
+import Classes from './components/Classes';
+import Login from './components/Login'
 import './App.css';
 
 function App() {
@@ -8,20 +12,26 @@ function App() {
         <h1>Anywhere Fitness</h1>
 
         <div className='nav-links'>
-        <Link className='topLinks'>Classes</Link>
+        <Link className='topLinks' to='/' >Home</Link>  
+        <Link className='topLinks' to='/classes'>Classes</Link>
         <Link className='topLinks'>Instructors</Link>
-        <Link className='topLinks mainLink'>Sign Up</Link>
-        <Link className='topLinks mainLink'>Login</Link>
+        <Link className='topLinks mainLink' to='/signUp'>Sign Up</Link>
+        <Link className='topLinks mainLink' to='/login'>Login</Link>
         </div>
       </nav>
       <div className='contentWrapper'>
-          <h2>Content Will GO here</h2>
-          <div className="push"></div>
-        </div>
+      <Switch>
+        <Route path='/classes' component={Classes} />
+        <Route path='/signUp' component={Signup} />
+        <Route path='/login' component={Login}  />
+        <Route path='/' component={Home} />
+      </Switch>
+      </div>
       <footer className='footer'>
         <nav className='footer-nav'>
-        <Link className='link'>Sign Up</Link>
-        <Link className='link'>Login</Link>
+        <Link className='link' to='/'>Home</Link>
+        <Link className='link' to='/signUp' >Sign Up</Link>
+        <Link className='link' to='/login' >Login</Link>
         <Link className='link'>About</Link>
         <Link className='link'>Contact</Link>
         <Link className='link'>Help</Link>
@@ -29,6 +39,7 @@ function App() {
 
         <h3>Anywhere Fitness 2021</h3>
       </footer>
+    
     </div>
   );
 }
