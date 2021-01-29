@@ -5,8 +5,14 @@ import { Link, Route } from 'react-router-dom';
 function Home(){
     return(
         <div>
-            <button>Sign Up</button>
-            <button>Login</button>
+            <h1>Home</h1>
+
+            <div>
+                <button>Sign Up</button>
+                <button>Login</button>
+            </div>
+            
         </div>
     )
 }
+export default Home
