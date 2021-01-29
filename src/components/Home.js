@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
+import Signup from './Signup';
+import Login from './Login';
 
 
 function Home(){
@@ -8,10 +10,13 @@ function Home(){
             <h1>Home</h1>
 
             <div>
-                <button>Sign Up</button>
-                <button>Login</button>
+                <Link to='/signUp'>Sign Up</Link>
+                <Link to='/login'>Login</Link>
             </div>
-            
+            <Switch>
+                <Route path='/signUp' component={Signup} />
+                <Route path='/login' component={Login} />
+            </Switch>
         </div>
     )
 }
