@@ -2,7 +2,8 @@ import { Route, Link, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Signup from './components/Signup';
 import Classes from './components/Classes';
-import Login from './components/Login'
+import Instructors from './components/Instructors'
+import Login from './components/Login';
 import './App.css';
 
 function App() {
@@ -14,13 +15,14 @@ function App() {
         <div className='nav-links'>
         <Link className='topLinks' to='/' >Home</Link>  
         <Link className='topLinks' to='/classes'>Classes</Link>
-        <Link className='topLinks'>Instructors</Link>
+        <Link className='topLinks' to='/instructors'>Instructors</Link>
         <Link className='topLinks mainLink' to='/signUp'>Sign Up</Link>
         <Link className='topLinks mainLink' to='/login'>Login</Link>
         </div>
       </nav>
       <div className='contentWrapper'>
       <Switch>
+        <Route path='/instructors' component={Instructors} />
         <Route path='/classes' component={Classes} />
         <Route path='/signUp' component={Signup} />
         <Route path='/login' component={Login}  />
